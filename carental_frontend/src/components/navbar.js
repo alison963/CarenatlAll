@@ -1,7 +1,8 @@
 import React from "react";
+import './navbar.css';
 
 const Navbar = () => {
-    return ( 
+    return (
         <div className="navbar text-white ">
             <div>
                 <h2 className="text-2xl">Home</h2>
@@ -9,16 +10,16 @@ const Navbar = () => {
             </div>
 
             <div>
-                <h1 className="font-serif text-teal-100 text-4xl">Carental</h1>  
+                <h1 className="font-serif text-teal-100 text-4xl">Carental</h1>
             </div>
-            
-            <div>  
+
+            <div>
                 <h2 className="text-2xl" >Settings</h2>
             </div>
-            
-            
+
+
         </div>
-     );
+    );
 }
- 
+
 export default Navbar;

@@ -1,47 +1,30 @@
-
 import '../App.css';
 import React, { useEffect, useState } from 'react';
 import Content from '../components/Content';
-import AddCar from '../components/AddCar';
+import { Link } from 'react-router-dom';
 
 
 function App() {
-
-
   const [products, setProducts] = useState([]);
 
   // function to delete an Item 
   async function deleteItem(id) {
-    {
-      await fetch(
-        `http://localhost:3004/Products/${id}`,
-        { method: "DELETE" }
-      );
-      setProducts(products.filter((product) => product.id !== id));
 
-    }
-  }
-
-  //function to add an Item
-  function addItem(newCar) {
-
-  }
-
-  function saveChanges() {
+    await fetch(
+      `http://localhost:4000/Products/${id}`,
+      { method: "DELETE" }
+    );
+    setProducts(products.filter((product) => product.id !== id));
 
 
   }
-  /* 
-  array is created with useState and it gets updated every time i run the app if something changed in json file 
-  */
-
 
 
   function getProduct() {
     fetch("http://localhost:4000/Products")
       .then((response) => {
         if (response.ok) {
-          return response.json();
+          return response.json()
         }
         throw new Error();
       })
@@ -64,10 +47,14 @@ function App() {
   */
   return (
     <div className="App">
-      <AddCar onAdd={addItem}
+      <div className='feature'>
+        <Link className='link' to={'/createItem'}>Add Car</Link>
+        <input
+          placeholder="search..."
+        />
+      </div>
 
-      />
-      <div className="grid grid-cols-2">
+      <div className="map grid grid-cols-1">
         {products.map((product, index) => (
           <div key={index}>
             <Content
@@ -76,14 +63,17 @@ function App() {
               name={product.make}  // Render product name
               price={product.price}
               mileage={product.mileage}
+              modell={product.model}
+              image={product.image}
+              color={product.color}
+              transmission={product.transmission}
+              year={product.year}
+              fuelType={product.fuelType}
               onDelete={deleteItem}
-
             />
           </div>
         ))}
       </div>
-
-
     </div>
   );
 }

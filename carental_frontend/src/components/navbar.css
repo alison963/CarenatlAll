@@ -1,0 +1,26 @@
+.navbar {
+    background: #1c4645;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 auto;
+}
+
+.navbar>div {
+    background: #1c4645;
+    padding: 20px;
+}
+
+.navbar>div:nth-child(1) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.navbar>div:nth-child(2) {
+    text-align: center;
+}
+
+.navbar>div:nth-child(3) {
+    text-align: right;
+    display: grid;
+
+}

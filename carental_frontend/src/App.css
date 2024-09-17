@@ -1,76 +1,30 @@
-.navbar {
-  background: #1c4645;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  margin: 0 auto;
-}
-
-.navbar > div {
-  background: #1c4645;
-  padding: 20px;
-}
-.navbar > div:nth-child(1) {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-.navbar > div:nth-child(2) {
-text-align: center;
-}
-
-.navbar > div:nth-child(3) {
-  text-align: right;
-  display: grid;
-
-}
 body {
-  
   font-family: "Source Sans Pro", sans-serif;
   color: black;
-  font-weight: 300;
+  font-weight: 400px;
   background-color: rgba(3, 102, 82, 0.3);
   width: 100%;
   height: 100%;
 }
-.content {
-  background-color: #1c4645 ;
-  border: 1px solid;
-  padding: 20px;
-  display: grid;
-  grid-template-columns: 1fr;
-  padding: 20px;  
-}
-.contentCar {
-  display: grid;
-  padding: 20px;
-  border: 1px solid #ccc;
-  grid-template-columns: repeat(6,1fr);
+
+.feature {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 2vh;
 }
 
-.container {
-  margin: 10% auto;
-  padding: 80px 0;
-  text-align: center;
-}
-
-.container h1 {
-  font-size: 40px;
-  font-weight: 200;
-}
 input {
   border: 1px solid rgba(252, 252, 252, 0.4);
   background-color: rgba(255, 255, 255, 0.3);
-  width: 250px;
-  border-radius: 3px;
   font-family: "Source Sans Pro", sans-serif;
-  padding: 10px 15px;
-  margin: 0 auto 10px auto;
-  display: block;
   text-align: center;
-  font-size: 18px;
   color: white;
-  font-weight: 300;
+  margin-right: 2vh;
 }
-button {
+
+button,
+.link {
   appearance: none;
   outline: 0;
   background-color: white;
@@ -80,4 +34,17 @@ button {
   border-radius: 3px;
   width: 250px;
   font-size: 18px;
+  margin-left: 2vh;
+  text-align: center;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid red;
+}
+
+.map {
+  margin-top: 5vh;
 }
