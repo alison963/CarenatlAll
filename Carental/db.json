@@ -141,26 +141,6 @@
       "image": "https://fakeimg.pl/500x500/008000"
     },
     {
-      "id": 12,
-      "make": "Lexus",
-      "model": "RX 350",
-      "year": 2022,
-      "color": "White",
-      "mileage": 8000,
-      "price": 48000,
-      "fuelType": "Gasoline",
-      "transmission": "Automatic",
-      "engine": "3.5L V6",
-      "horsepower": 295,
-      "features": [
-        "Premium Leather Seats",
-        "Panoramic Sunroof",
-        "Mark Levinson Audio"
-      ],
-      "owners": 1,
-      "image": "https://fakeimg.pl/500x500/ffffff"
-    },
-    {
       "id": 13,
       "make": "Ford",
       "model": "F-150",
