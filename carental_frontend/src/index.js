@@ -13,7 +13,6 @@ root.render(
     <Routes>
       <Route path='/' element={<App />}></Route>
       <Route path='/createItem' element={<AddCar />}></Route>
-
     </Routes>
 
   </BrowserRouter>

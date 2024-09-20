@@ -2,6 +2,7 @@ import './AddCar.css';
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from 'axios';
+import Button from '../../components/Button';
 
 
 function AddCar() {
@@ -37,34 +38,32 @@ function AddCar() {
 
   }
   return (
-    <div className="container">
+    <div className="container ">
+      <h1 className='font-bold mb-3'>ADD YOUR CAR</h1>
 
-      <h1>add your car</h1>
-      <form className="formContainer" onSubmit={handelSubmit}>
+      <form className='flex flex-col items-center ' onSubmit={handelSubmit}>
         <input
-
           name="make"
           placeholder="Car name"
+        />
 
-        /><div>
-          <input
+        <input
+          name="price"
+          placeholder="Car price"
+        />
 
-            name="price"
-            placeholder="Car price"
+        <input
+          name="mileage"
+          placeholder="distance"
+        />
+        <div className=' flex justify-between mt-4'>
+          <button className='text-white bg-green-800 hover:bg-green-900 font-medium rounded-lg text-2xl px-5 py-2.5 me-2 mb-2 mx-0'>Submit</button>
 
-          />
-        </div>
-        <div>
-          <input
-            name="mileage"
-            placeholder="distance"
-          />
-        </div>
-        <div className='contButton'>
-          <button className='button'>Submit </button>
-          <Link className='button' to={'/'} >cancel</Link>
+          <Link className='text-white bg-red-800 hover:bg-red-900 font-medium rounded-lg text-2xl px-5 py-2.5 me-2 mb-2 mx-0' to={'/'} >cancel</Link>
         </div>
       </form >
+
+
     </div >
   );
 }

@@ -1,21 +1,22 @@
 .ContentAll {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 20vh;
-    font-size: 2vw;
+    flex-direction: column;
+    margin: 0 15vh 5vh 15vh;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5vw;
     box-shadow: 0px 2px 0px 0px black;
     color: white;
     border-radius: 3px;
     font-family: "Source Sans Pro", sans-serif;
-    padding: 10px 15px;
 }
 
 .leftDiv,
 .rightDiv {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 20px;
 }
 
 .rightButtons {

@@ -1,7 +1,8 @@
-import '../App.css';
+import './App.css';
 import React, { useEffect, useState } from 'react';
 import Content from '../components/Content';
 import { Link } from 'react-router-dom';
+import Button from '../components/Button';
 
 
 function App() {
@@ -46,15 +47,15 @@ function App() {
   
   */
   return (
-    <div className="App">
-      <div className='feature'>
-        <Link className='link' to={'/createItem'}>Add Car</Link>
-        <input
+    <div className="App text-xl overflow-hidden">
+      <div className='App-group flex items-center justify-between mx-5 py-5'>
+        <Link className='text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-2xl px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700' to={'/createItem'}>Add Car</Link>
+        <input className='rounded-lg text-2xl px-5 py-2.5 me-2 mb-2'
           placeholder="search..."
         />
       </div>
 
-      <div className="map grid grid-cols-1">
+      <div className="map">
         {products.map((product, index) => (
           <div key={index}>
             <Content
