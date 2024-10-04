@@ -9,6 +9,7 @@
     color: white;
     border-radius: 3px;
     font-family: "Source Sans Pro", sans-serif;
+    gap: 10px;
 }
 
 .leftDiv,
